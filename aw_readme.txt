@@ -4,3 +4,9 @@ git add index.html	# Added index.html to the staging area.
 git rm --cached index.html	# Remove index.html from the staging area. DOES NOT remove the physical file  :-)  .
 git add .	# Add all files in staging area AND downwards...
 git rm -r --cached .	#  Remove all files in staging area and downwards (the -r does the downwards/recursively bit).
+git add -A	# Will add your ENTIRE workspace to your stage directory - Up AND Down - even if you are inside a sub-directory (eg ./test).
+git commit -m "bootstrap project"	# Commit [locally] all mofified files in the staging area.
+git log					# gives a terse commit history, including commit HASH, MESSAGE, DATE-TIME STAMP.
+git show 38b3070a450e777ef0329a802b879f888b5879bc	# show a detailed account for a specific commit - by specifying is unique commit HASH.
+git diff	# shows difference between files in the volatile/working direcory and what is currently in the STAGING-area.
+
