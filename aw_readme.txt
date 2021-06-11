@@ -2,6 +2,9 @@
 # Amigoscode - Git and GitHub Tutorial For Beginners | Full Course [2021] [NEW]
 # https://www.youtube.com/watch?v=3fUbBnN_H2c&t=2753s
 
+# I don't care to "install" GIT right now,  because it comes sorta prepackagaged eith my VISUAL-STUDIO 2019: I just add the following directory to my path:
+# C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd
+
 # My initial GIT config commands.
 git config --global user.name "CobaltSoixante"
 git config --global user.email "weingartena@gmail.com"
