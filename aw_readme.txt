@@ -139,3 +139,8 @@ To https://github.com/CobaltSoixante/learning-git
  * [new branch]      main -> main
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 
+# After doing the above, after any changes just a 'git push' will suffice, EG:
+#Make changes
+git add .
+git commit -m "..."
+git push
