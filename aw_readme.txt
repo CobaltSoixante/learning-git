@@ -28,7 +28,10 @@ git config -l	#	List all my configuration parameters.
 #			<-restore-
 #									amend
 #	branch
-#												-push->
+#                                                                                               branch -r (from local console: cur branch on remote repo)
+#                                                                                               branch -a (all current branches: LOACAL and REMOTE)
+#												-push-> (from LOCAL console)
+#       *                                                               *                       <-pull- (from LOCAL console)
 #
 git init .	# Create new git repository at current directory.
 git status	# Shows current git branch and other stuff about the branch.
@@ -52,6 +55,11 @@ git branch -M main	# Renames ur current local branch to 'main' - EG from 'master
 	# çuz fr sume fing reason GITHUB decided to rename the remote master branch from master to main.
 
 git push -u origin main		# PUSH from our local repository to remote (EG github) repository.
+#
+# MEANING of the git push parameters used here:
+# -u origin		take the files from the current LOCAL branch...
+# main			name of the REMOTE branch to push the files to. 
+#
 # When I originally issue this command - I get the following error:
 ## fatal: 'origin' does not appear to be a git repository
 ## fatal: Could not read from remote repository.
@@ -144,3 +152,38 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 git add .
 git commit -m "..."
 git push
+
+# After adding README.md on the REMOTE repository (using the create-README.md-file button), I do the following on my LOCAL repository to PULL it in to LOCAL repository AND WORKSPACE:
+git pull
+
+#===================================================================
+
+
+WORKING WITH BRANCHES (1:06:00 / 2:09:00)
+
+git branch feature-a		# CREATE a new branch from the CURRENT branch you are using (seems to stay on the same current branch...)
+git branch			# check which CURRENT bracnch you are on.
+git checkout feature-a 		# goto the branch u wanna get to
+git checkout -			# alternates bewteen the current branch and the branch we were previously on.
+git checkout -b newBranchName	# creates a new branch and situates us on it.
+git branch -d branchnameToDelete	# delete a branch (if this is our CURRENT branch we will get an error).
+
+
+#===================================================================
+
+
+[PULL] REQUEST at the github REMOTE LEVEL!
+
+In a corporate environment we DO NOT work on the main brach.
+We create a branch named feature-A, feature-B, etc, work on it, commit it, push it to the REMOTE - and select a reviewer from "corporate" (on the REMOTE screen) to merge it to the MAIN for us.
+
+# BAD PRCTICE:
+git merge feature-a	# Merge the branch 'feature-a' INTO the branch I am CURRENTLY on (may typically be 'main').
+
+#===================================================================
+
+WORKFLOW:
+1. PULL the latest changes from REMOTE 'main' to my LOCAL 'main' repository.
+2. git checkout -b newBranchName	# create a new branch LOCALLY.
+3. Work on that new branch LOCALLY with all new features, etc...
+4. Every day-or-two - "REBASE" my LOCAL main from the "REMOTE", so the corporate/community project doesn't ëscape my grasp.
