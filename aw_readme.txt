@@ -161,10 +161,17 @@ git pull
 
 WORKING WITH BRANCHES (1:06:00 / 2:09:00)
 
+git branch			# check which LOCAL branch you are on.
 git branch feature-a		# CREATE a new branch from the CURRENT branch you are using (seems to stay on the same current branch...)
-git branch			# check which CURRENT bracnch you are on.
 git checkout feature-a 		# goto the branch u wanna get to
+# Do any work U want on the branch.
+git push -u origin feature-a	# takes the CURRENT branch, and uploads it to a feature=a branch on the REMOTE.
+
+git branch			# check which LOCAL branch you are on.
+git branch -r			# check which branch ur on in REMOTE
+git branch -a			# check ALL branches ur on
 git checkout -			# alternates bewteen the current branch and the branch we were previously on.
+
 git checkout -b newBranchName	# creates a new branch and situates us on it.
 git branch -d branchnameToDelete	# delete a branch (if this is our CURRENT branch we will get an error).
 
