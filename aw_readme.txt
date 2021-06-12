@@ -172,8 +172,10 @@ git branch -r			# check which branch ur on in REMOTE
 git branch -a			# check ALL branches ur on
 git checkout -			# alternates bewteen the current branch and the branch we were previously on.
 
-git checkout -b newBranchName	# creates a new branch and situates us on it.
-git branch -d branchnameToDelete	# delete a branch (if this is our CURRENT branch we will get an error).
+ALTERNATIVE WAY OF CREATING BRANCH FROM main (less steps)
+git chachout main		# go back to main branch.
+git checkout -b to-delete	# CREATE new branch (will AUTOMATICALY switch to new branch).
+git branch -d to-delete		# delete a branch (if this is our CURRENT branch we will get an error).
 
 
 #===================================================================
