@@ -188,11 +188,16 @@ We create a branch named feature-A, feature-B, etc, work on it, commit it, push 
 
 # BAD PRCTICE:
 git merge feature-a	# Merge the branch 'feature-a' INTO the branch I am CURRENTLY on (may typically be 'main').
+# ABOVE: bad practice. Good practice - see below.
 
 #===================================================================
 
 WORKFLOW:
+*. NEVER PUSH to the main/master branch directly.
 1. PULL the latest changes from REMOTE 'main' to my LOCAL 'main' repository.
 2. git checkout -b newBranchName	# create a new branch LOCALLY.
 3. Work on that new branch LOCALLY with all new features, etc...
+*. Periodically - push my branch to the REMOTE so I don't lose my changes accidentally.
 4. Every day-or-two - "REBASE" my LOCAL main from the "REMOTE", so the corporate/community project doesn't ëscape my grasp.
+5. WHEN I'M READY: Raise [PULL-REQUEST] on REMOTE so my final PUSH-brnch can be reviewed.
+
