@@ -200,4 +200,4 @@ WORKFLOW:
 *. Periodically - push my branch to the REMOTE so I don't lose my changes accidentally.
 4. Every day-or-two - "REBASE" my LOCAL main from the "REMOTE", so the corporate/community project doesn't ëscape my grasp.
 5. WHEN I'M READY: Raise [PULL-REQUEST] on REMOTE so my final PUSH-brnch can be reviewed.
-
+6. On REMOTE: [Merge Pull Request] (done by reviewer)
