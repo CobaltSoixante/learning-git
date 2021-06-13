@@ -199,5 +199,11 @@ WORKFLOW:
 3. Work on that new branch LOCALLY with all new features, etc...
 *. Periodically - push my branch to the REMOTE so I don't lose my changes accidentally.
 4. Every day-or-two - "REBASE" my LOCAL main from the "REMOTE", so the corporate/community project doesn't ëscape my grasp.
-5. WHEN I'M READY: Raise [PULL-REQUEST] on REMOTE so my final PUSH-brnch can be reviewed.
+5. On REMOTE: WHEN I'M READY: Raise [PULL-REQUEST] on REMOTE so my final PUSH-brnch can be reviewed.
 6. On REMOTE: [Merge Pull Request] (done by reviewer)
+7. [On REMOTE - typically u may DELETE the newBranchName, because ur done with it]
+*. On LOCAL - if u do git log [--oneline]  from main(!) branch u wont see the change yet becuz u didn't PULL...
+8. On LOCAL: ensure ur in main branch and do "git pull" to get the new merged "main" from REMOTE.
+*. Do git log now and ul see it.
+*. [On LOCAL - u can now delete the newBranchName from the machine, just as we did on the server: git branch -d feature-a]
+
