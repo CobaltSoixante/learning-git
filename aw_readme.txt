@@ -219,3 +219,9 @@ WORKFLOW (revisited - 1:25:50)
 7. ... I then STASH my COMMIT (LOCALLY), bring all my changes from master to main, and put my COMMIT on top of it...
 8. ... Finally: PUSH to REMOTE, discuss with peers, yadda yadda, merge my commit to the REMOTE main/master branch.
 
+#===================================================================
+
+DEALING WITH CONFLICTS (1:28:38) and MERGING CONFLICTS (1:34:46)
+*. Say we made changes to index.html on our LOCAL feature-xyz branch (doing this with VS-CODE is nice because it color-codes conflicts as we go along). And some idiot made conflicting changes and "beat us to it"and checked them into the REMOTE feature-xyz branch...
+*. ... Now we (me) have to PULL the changes from REMOTE into our LOCAL (git pull).
+*. We now LOCALLY have an annotated copy of index.html with guidelines for resolving/merging the conflict (presumably this is non-destructive - because we already have a LOCAL commit on our machine of our desired content for this file).
