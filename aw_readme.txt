@@ -225,3 +225,18 @@ DEALING WITH CONFLICTS (1:28:38) and MERGING CONFLICTS (1:34:46)
 *. Say we made changes to index.html on our LOCAL feature-xyz branch (doing this with VS-CODE is nice because it color-codes conflicts as we go along). And some idiot made conflicting changes and "beat us to it"and checked them into the REMOTE feature-xyz branch...
 *. ... Now we (me) have to PULL the changes from REMOTE into our LOCAL (git pull).
 *. We now LOCALLY have an annotated copy of index.html with guidelines for resolving/merging the conflict (presumably this is non-destructive - because we already have a LOCAL commit on our machine of our desired content for this file).
+
+#===================================================================
+
+GIT REBASE (intro: 1:40:54; detail: 1:42:08; recap: 1:52:20)
+
+*. REBASE is a process of bringing the changes in the REMOTE (typically the master/main) - and imposing them upon the LOCAL BRANCH you are working on.
+*. We continue working with LOCAL branch 'feature-xyz' that we created last section.
+
+*. The corporate/REMOTE master/main has chenged: we need to incorporate those changes into our LOCAL feature-xyz branch (this is something we do periodically - just to keep touch with corporate)
+   Look at this as: we bring in REMOTE/corporate master/main, and try to impose this on our LOCAL 'feature-xyz'branch:
+   Will work smoothly UNLESS there are conflicts, and then we must resolve them.
+# From our LOCAL 'feature-xyz' branch:
+git pull -r origin main
+# or:
+git pull --remote origin main
