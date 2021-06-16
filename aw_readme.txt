@@ -240,9 +240,9 @@ GIT REBASE (intro: 1:40:54; detail: 1:42:08; recap: 1:52:20)
 git pull -r origin main
 # or:
 git pull --rebase origin main
-
 # I think 'origin' means our current LOCAL branch, and 'main' is the REMOTE branch we are rebasing from. I suppose that 'main' is the norm, but that u may specify a different REMOTE branchname (typically identical to your local) in the crazy case where several teal members are attacking the same branchName.
 
+# REPEATEDLY do the following 3 steps until the LAST step ('git rebase --continue') says "Seccessfully rebased and updated ..."
 ## via EDITOR: RESOLVE any conflicts LOCALLY (EG via visual code)
 git add . # Restage any conflicts u resolved manually.
 git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
