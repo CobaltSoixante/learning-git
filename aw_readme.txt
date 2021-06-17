@@ -239,4 +239,5 @@ GIT REBASE (intro: 1:40:54; detail: 1:42:08; recap: 1:52:20)
 # From our LOCAL 'feature-xyz' branch:
 git pull -r origin main
 # or:
-git pull --remote origin main
+git pull --rebase origin main
+# I think 'origin' means our current LOCAL branch, and 'main' is the REMOTE branch we are rebasing from. I suppose that 'main' is the norm, but that u may specify a different REMOTE branchname (typically identical to your local) in the crazy case where several teal members are attacking the same branchName.
