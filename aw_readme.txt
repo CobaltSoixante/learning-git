@@ -235,7 +235,10 @@ GIT REBASE (intro: 1:40:54; detail: 1:42:08; recap: 1:52:20)
 
 *. The corporate/REMOTE master/main has chenged: we need to incorporate those changes into our LOCAL feature-xyz branch (this is something we do periodically - just to keep touch with corporate)
    Look at this as: we bring in REMOTE/corporate master/main, and try to impose this on our LOCAL 'feature-xyz'branch:
-   Will work smoothly UNLESS there are conflicts, and then we must resolve them.
+   Will work smoothly UNLESS there are conflicts, and then we must resolve them...
+*. ...Conceptually, is like this: we work on our LOCAL/dev branch, and want to periodically resync/REBASE IT with the REMOTE/CORPORATE main/master branch (so we are not out of touch with CORPORATE).
+   So, we REBASE: we take everything from REMOTE/CORPORATE main/master to our LOCAL/dev branch, and REMOTE/CORPORATE becomes our guideline! -
+   - We then go through the process of RE-SUPERIMPOSING our own recent LOCAL/dev changes  (IE 'since last REBASE') on what is now a current [LOCAL] snapshot of REMOTE/CORPORATE.
 # From our LOCAL 'feature-xyz' branch:
 git pull -r origin main
 # or:
