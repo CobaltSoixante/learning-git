@@ -219,3 +219,64 @@ WORKFLOW (revisited - 1:25:50)
 7. ... I then STASH my COMMIT (LOCALLY), bring all my changes from master to main, and put my COMMIT on top of it...
 8. ... Finally: PUSH to REMOTE, discuss with peers, yadda yadda, merge my commit to the REMOTE main/master branch.
 
+#===================================================================
+
+DEALING WITH CONFLICTS (1:28:38) and MERGING CONFLICTS (1:34:46)
+*. Say we made changes to index.html on our LOCAL feature-xyz branch (doing this with VS-CODE is nice because it color-codes conflicts as we go along). And some idiot made conflicting changes and "beat us to it"and checked them into the REMOTE feature-xyz branch...
+*. ... Now we (me) have to PULL the changes from REMOTE into our LOCAL (git pull).
+*. We now LOCALLY have an annotated copy of index.html with guidelines for resolving/merging the conflict (presumably this is non-destructive - because we already have a LOCAL commit on our machine of our desired content for this file).
+
+#===================================================================
+
+GIT REBASE (intro: 1:40:54; detail: 1:42:08; recap: 1:52:20)
+
+*. REBASE is a process of bringing the changes in the REMOTE (typically the master/main) - and imposing them upon the LOCAL BRANCH you are working on.
+*. We continue working with LOCAL branch 'feature-xyz' that we created last section.
+
+*. The corporate/REMOTE master/main has chenged: we need to incorporate those changes into our LOCAL feature-xyz branch (this is something we do periodically - just to keep touch with corporate)
+   Look at this as: we bring in REMOTE/corporate master/main, and try to impose this on our LOCAL 'feature-xyz'branch:
+   Will work smoothly UNLESS there are conflicts, and then we must resolve them...
+*. ...Conceptually, is like this: we work on our LOCAL/dev branch, and want to periodically resync/REBASE IT with the REMOTE/CORPORATE main/master branch (so we are not out of touch with CORPORATE).
+   So, we REBASE: we take everything from REMOTE/CORPORATE main/master to our LOCAL/dev branch, and REMOTE/CORPORATE becomes our guideline! -
+   - We then go through the process of RE-SUPERIMPOSING our own recent LOCAL/dev changes  (IE 'since last REBASE') on what is now a current [LOCAL] snapshot of REMOTE/CORPORATE.
+# From our LOCAL 'feature-xyz' branch:
+git pull -r origin main
+# or:
+git pull --rebase origin main
+# I think 'origin' means our current LOCAL branch, and 'main' is the REMOTE branch we are rebasing from. I suppose that 'main' is the norm, but that u may specify a different REMOTE branchname (typically identical to your local) in the crazy case where several teal members are attacking the same branchName.
+
+#- - - - - - - - -
+
+# REPEATEDLY do the following 3 steps until the LAST step ('git rebase --continue') says "Seccessfully rebased and updated ..."
+## via EDITOR: RESOLVE any conflicts LOCALLY (EG via visual code)
+git add . # Restage any conflicts u resolved manually.
+git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
+## IN REALITY - when u want to REBASE u may want to first "sqaush" (stash?) al you branch commits into a single commit so u dont have to repeate the above multiple times.
+   This may(?) spare u the step that follows.
+
+# FINALLY, At the end of this our REMOTE branch (feature-xyz) STILL won't contain the material we ORIGINALLY 'pull --rebased'd in from CORPORATE (though it will contain all our CONFLICT resolutions, IE the original material we ADDED to the LOCAL branch). To resolve this:
+git push --force
+
+# WHEN WE ARE READY to check into REMOTE/CORPORATE/master main -
+# the simplest flow of events at the LOCAL will be:
+git add .
+git commit -m "comment"   # remember: this is only a LOCAL operation
+git push
+# goto SERVER/CORPORATE website and do [PULL REQUEST]: (for some reason we did not perform this at the end of the lesson - only ALMOST did it, without confirming).
+
+#===================================================================
+
+GIT CLIENTS (1:53:59)
+
+# The guy doesn't use any, but mentions: GitHub DeskTop, SourceTree, Visual code
+
+#===================================================================
+
+GITPOD (2:21:42)
+
+# I dont get a GITPOD bitton: mebbe cuz I dont have the jetbrains plugins he's got.
+  Its about having a IDE on the web (including VS-CODE).
+
+#===================================================================
+
+BUILDING YOUR OWN PORTFOLIO (2:00:39)
