@@ -254,3 +254,6 @@ git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
 
 # FINALLY, At the end of this our REMOTE branch (feature-xyz) STILL won't contain the material we ORIGINALLY 'pull --rebased'd in from CORPORATE (though it will contain all our CONFLICT resolutions, IE the original material we ADDED to the LOCAL branch). To resolve this:
 git push --force
+
+# WHEN WE ARE READY to check into REMOTE/CORPORATE/master main -
+# On the server generate [New Pull Request], and do ur thing.
