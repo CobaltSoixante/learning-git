@@ -275,7 +275,7 @@ most IDE's have GIT integration built in, EG: VS Code...
 
 #===================================================================
 
-GITPOD (2:21:42)
+GITPOD (1:57:42)
 
 # I dont get a GITPOD bitton: mebbe cuz I dont have the jetbrains plugins he's got.
   Its about having a IDE on the web (including VS-CODE).
