@@ -256,4 +256,9 @@ git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
 git push --force
 
 # WHEN WE ARE READY to check into REMOTE/CORPORATE/master main -
-# On the server generate [New Pull Request], and do ur thing.
+# the simplest flow of events at the LOCAL will be:
+git add .
+git commit -m "comment"   # remember: this is only a LOCAL operation
+git push
+# goto SERVER/CORPORATE website and do [PULL REQUEST]
+
