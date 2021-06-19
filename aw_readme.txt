@@ -263,3 +263,20 @@ git add .
 git commit -m "comment"   # remember: this is only a LOCAL operation
 git push
 # goto SERVER/CORPORATE website and do [PULL REQUEST]: (for some reason we did not perform this at the end of the lesson - only ALMOST did it, without confirming).
+
+#===================================================================
+
+GIT CLIENTS (1:53:59)
+
+# The guy doesn't use any, but mentions: GitHub DeskTop, SourceTree, Visual code
+
+#===================================================================
+
+GITPOD (2:21:42)
+
+# I dont get a GITPOD bitton: mebbe cuz I dont have the jetbrains plugins he's got.
+  Its about having a IDE on the web (including VS-CODE).
+
+#===================================================================
+
+BUILDING YOUR OWN PORTFOLIO (2:00:39)
