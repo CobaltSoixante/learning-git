@@ -251,6 +251,8 @@ git pull --rebase origin main
 ## via EDITOR: RESOLVE any conflicts LOCALLY (EG via visual code)
 git add . # Restage any conflicts u resolved manually.
 git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
+## IN REALITY - when u want to REBASE u may want to first "sqaush" (stash?) al you branch commits into a single commit so u dont have to repeate the above multiple times.
+   This may(?) spare u the step that follows.
 
 # FINALLY, At the end of this our REMOTE branch (feature-xyz) STILL won't contain the material we ORIGINALLY 'pull --rebased'd in from CORPORATE (though it will contain all our CONFLICT resolutions, IE the original material we ADDED to the LOCAL branch). To resolve this:
 git push --force
@@ -260,5 +262,4 @@ git push --force
 git add .
 git commit -m "comment"   # remember: this is only a LOCAL operation
 git push
-# goto SERVER/CORPORATE website and do [PULL REQUEST]
-
+# goto SERVER/CORPORATE website and do [PULL REQUEST]: (for some reason we did not perform this at the end of the lesson - only ALMOST did it, without confirming).
