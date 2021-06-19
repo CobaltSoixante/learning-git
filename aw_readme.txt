@@ -245,7 +245,12 @@ git pull -r origin main
 git pull --rebase origin main
 # I think 'origin' means our current LOCAL branch, and 'main' is the REMOTE branch we are rebasing from. I suppose that 'main' is the norm, but that u may specify a different REMOTE branchname (typically identical to your local) in the crazy case where several teal members are attacking the same branchName.
 
+#- - - - - - - - -
+
 # REPEATEDLY do the following 3 steps until the LAST step ('git rebase --continue') says "Seccessfully rebased and updated ..."
 ## via EDITOR: RESOLVE any conflicts LOCALLY (EG via visual code)
 git add . # Restage any conflicts u resolved manually.
 git rebase --continue # rebase conflict #1 and 'continue' rebasing if necessary.
+
+# FINALLY, At the end of this our REMOTE branch (feature-xyz) STILL won't contain the material we ORIGINALLY 'pull --rebased'd in from CORPORATE (though it will contain all our CONFLICT resolutions, IE the original material we ADDED to the LOCAL branch). To resolve this:
+git push --force
