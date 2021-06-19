@@ -269,6 +269,9 @@ git push
 GIT CLIENTS (1:53:59)
 
 # The guy doesn't use any, but mentions: GitHub DeskTop, SourceTree, Visual code
+GitHub DeskTop  [is the official one]
+SourceTree
+most IDE's have GIT integration built in, EG: VS Code...
 
 #===================================================================
 
