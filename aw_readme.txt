@@ -279,7 +279,28 @@ GITPOD (1:57:42)
 
 # I dont get a GITPOD bitton: mebbe cuz I dont have the jetbrains plugins he's got.
   Its about having a IDE on the web (including VS-CODE).
+# I get ~something if I prepend 'gitpod.io/#' to my github repository URL: dunno what it is.
+# dont think I need this thing: gives u a VISUAL Code IDE on the cloud - for if u have a crap PC?
 
 #===================================================================
 
-BUILDING YOUR OWN PORTFOLIO (2:00:39)
+BUILDING YOUR OWN PORTFOLIO (2:00:35)
+
+READ.md file - has its own syntax. U need to goto another link to learn it.
+
+#===================================================================
+
+EXPLORING GITHUB (2:06:50)
+
+#===================================================================
+
+OPEN SOURCE SOFTWARE (2:13:53)
+
+At top  click [EXPLORE] - u get to all the repositories on GITHUB.
+
+ur project - if open - should have a "LICENSE" file. Has formatting rules: 2B explored.
+
+#===================================================================
+
+OPEN SOURCE SOFTWARE (2:19:44)
+
