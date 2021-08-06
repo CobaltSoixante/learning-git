@@ -133,6 +133,7 @@ fatal: Could not read from remote repository.
 # Now do the following, and we are OK:
 $ git remote add origin https://github.com/CobaltSoixante/learning-git
 
+### GIT PUSH - 00:56:15
 weing@DESKTOP-D0QKA9O /cygdrive/d/MyOtherProjects/learning-git
 $ git push -u origin main
 
@@ -153,13 +154,16 @@ git add .
 git commit -m "..."
 git push
 
+### GIT PULL - 01:00:52
 # After adding README.md on the REMOTE repository (using the create-README.md-file button), I do the following on my LOCAL repository to PULL it in to LOCAL repository AND WORKSPACE:
 git pull
 
 #===================================================================
 
+### BRANCHES (1:06:00-or-01:06:37 / 2:09:00)
+Best practice: don't work directly on main/master branch! - Create a 'feature-a' branch, do yoour stuff, and the merge back into master.
 
-WORKING WITH BRANCHES (1:06:00 / 2:09:00)
+### WORKING WITH BRANCHES (1:06:00-or-01:09:09 / 2:09:00)
 
 git branch			# check which LOCAL branch you are on.
 git branch feature-a		# CREATE a new branch from the CURRENT branch you are using (seems to stay on the same current branch...)
@@ -173,20 +177,32 @@ git branch -a			# check ALL branches ur on
 git checkout -			# alternates bewteen the current branch and the branch we were previously on.
 
 ALTERNATIVE WAY OF CREATING BRANCH FROM main (less steps)
-git chachout main		# go back to main branch.
+git chechout main		# go back to main branch.
 git checkout -b to-delete	# CREATE new branch (will AUTOMATICALY switch to new branch).
 git branch -d to-delete		# delete a branch (if this is our CURRENT branch we will get an error).
 
+#===================================================================
+
+### MAIN = MASTER (01:17:35)
+# Github (under MS) recently renamed master to main
 
 #===================================================================
 
+### PULL REQUESTS (01:18:16)
 
 [PULL] REQUEST at the github REMOTE LEVEL!
 
 In a corporate environment we DO NOT work on the main brach.
-We create a branch named feature-A, feature-B, etc, work on it, commit it, push it to the REMOTE - and select a reviewer from "corporate" (on the REMOTE screen) to merge it to the MAIN for us.
+We create a branch named feature-A, feature-B, etc, work on it, commit it, push it to the REMOTE -
+and raise a PULL REQUEST -
+and select a reviewer from "corporate" (on the REMOTE screen) to merge it to the MAIN for us.
+
+#===================================================================
+
+### MERGING PR'S [PULL REQUESTS] (01:19:17)
 
 # BAD PRCTICE:
+# LOCALLY: FROM THE local 'main' branch - merge my 'feature-a' branch into the 'main' branch:
 git merge feature-a	# Merge the branch 'feature-a' INTO the branch I am CURRENTLY on (may typically be 'main').
 # ABOVE: bad practice. Good practice - see below.
 
