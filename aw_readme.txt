@@ -5,6 +5,9 @@
 # I don't care to "install" GIT right now,  because it comes sorta prepackagaged eith my VISUAL-STUDIO 2019: I just add the following directory to my path:
 # C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\Git\cmd
 
+GIT SETUP - 00:15:15
+====================
+
 # My initial GIT config commands.
 git config --global user.name "CobaltSoixante"
 git config --global user.email "weingartena@gmail.com"
@@ -15,6 +18,8 @@ git config -l	#	List all my configuration parameters.
 # Ctrl+L = clear screen
 # In GIT a REPOSITORY is simply a COLLECTION of various different VERSIONS of a PROJECT.
 
+GIT INIT - 17:40
+================
 
 # Verbs is following table are given more-or-less in the order they were mentioned during the lesson:
 #
@@ -33,7 +38,11 @@ git config -l	#	List all my configuration parameters.
 #												-push-> (from LOCAL console)
 #       *                                                               *                       <-pull- (from LOCAL console)
 #
-git init .	# Create new git repository at current directory.
+git init .	# Create new git repository at current directory. RARELY ISSUED: only for new projects.
+
+GIT ADD - 00:22:10
+==================
+
 git status	# Shows current git branch and other stuff about the branch.
 #
 git add index.html	# Added index.html to the staging area.
@@ -42,14 +51,29 @@ git rm --cached index.html	# Remove index.html from the staging area. DOES NOT r
 git add .	# Add all files in staging area AND downwards...
 git rm -r --cached .	#  Remove all files in staging area and downwards (the -r does the downwards/recursively bit).
 git add -A	# Will add your ENTIRE workspace to your stage directory - Up AND Down - even if you are inside a sub-directory (eg ./test).
+
+COMMITS - 00:29:42
+==================
+
 git commit -m "bootstrap project"	# Commit [locally] all mofified files in the staging area.
 git log					# gives a terse commit history, including commit HASH, MESSAGE, DATE-TIME STAMP.
 git show 38b3070a450e777ef0329a802b879f888b5879bc	# show a detailed account for a specific commit - by specifying is unique commit HASH. (I think by default it will show result for the very LAST commit).
 git diff	# shows difference between files in the volatile/working direcory and what is currently in the STAGING-area.
 git restore index.js	# RESTORES changes to the WORKSPACE back to what they were in the STAGING-AREA.
+
+AMMEND COMMITS - - 00:38:01
+===========================
 #
 git commit --amend -m "ädded body {} in main.css"	# FIX a screwed up message to the last commit
 #
+
+GITHUB - 00:41:00
+=================
+At the very end is where we sign up to GITHUB if we don't already have an account.
+
+CREATE [GITHUB] REPO - 00:45:00
+===============================
+
 git branch	# tells u what branch ur on in ur local machine.
 git branch -M main	# Renames ur current local branch to 'main' - EG from 'master' to 'main' (which we did in preparation for moving our local 'master' branch to out GITHUB 'main' branch,
 	# çuz fr sume fing reason GITHUB decided to rename the remote master branch from master to main.
@@ -68,7 +92,11 @@ git push -u origin main		# PUSH from our local repository to remote (EG github) 
 #
 # At time 50:25 in the course I must trawl through a chapter "SSH KEYS SETUP" to resolve security issues.
 #
-# Withing the project, @top-righnt cornet, click the icon/avatar, then click settings.
+
+SSH KEYS SET UP - 00:50:24
+==========================
+
+# WITHIN THE PROJECT, @top-right corner, click the icon/avatar, then click settings.
 # click "SSH and GPG keys"
 # We need to generate a public and private SSH keys for our account; We associate the publik-key with our account, we use the private kqey to PUSH into our repository.
 # Under SSH-KEYS I see "There are no SSH keys associated with your account." - apparently I never needed them before.
@@ -124,6 +152,9 @@ ssh-add -K "C:\Users\weing/.ssh/id_ed25519"
 
 # NOW we add the SSH key to our GITHUB account (before we were just adding a private key to our dev machine).
 # GOTO the link "Adding a new SSH key to your GitHub account.".
+
+GIT PUSH - 00:56:17
+===================
 
 # Now do again, and we still get:
 $ git push -u origin main
